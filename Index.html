@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OLOS JOKER STATS</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#090d18;
+  color:white;
+}
+header{
+  background:#151d30;
+  padding:25px 15px;
+  text-align:center;
+  border-bottom:2px solid #e7b52e;
+}
+h1{color:#f5c542;margin:0}
+header p{color:#bbb}
+.container{padding:18px;max-width:650px;margin:auto}
+.card{
+  background:#172238;
+  padding:18px;
+  border-radius:12px;
+  margin:15px 0;
+}
+h2{color:#f5c542}
+button{
+  background:#e7b52e;
+  color:#101010;
+  border:0;
+  padding:13px;
+  border-radius:8px;
+  font-weight:bold;
+  width:100%;
+}
+input{
+  width:100%;
+  padding:13px;
+  margin:8px 0;
+  border-radius:7px;
+  border:1px solid #555;
+}
+footer{text-align:center;color:#aaa;padding:20px}
+</style>
+</head>
+<body>
+<header>
+<h1>🃏 OLOS JOKER STATS</h1>
+<p>Les statistiques au service du sport</p>
+</header>
+<div class="container">
+<div class="card">
+<h2>Bienvenue !</h2>
+<p>Découvre les statistiques des matchs et les analyses sportives.</p>
+</div>
+<div class="card">
+<h2>⚽ Analyse d'un match</h2>
+<input id="equipe1" placeholder="Équipe 1">
+<input id="equipe2" placeholder="Équipe 2">
+<button onclick="analyser()">Analyser le match</button>
+<p id="resultat">Entre deux équipes pour commencer.</p>
+</div>
+<div class="card">
+<h2>📊 Nos services</h2>
+<p>✔ Statistiques des équipes</p>
+<p>✔ Analyse des performances</p>
+<p>✔ Historique des résultats</p>
+<p>✔ Conseils et informations sportives</p>
+</div>
+<div class="card">
+<h2>🔔 Abonnement</h2>
+<p>Bientôt : accès aux analyses premium.</p>
+</div>
+</div>
+<footer>
+OLOS JOKER STATS © 2026<br>
+Les analyses ne garantissent aucun gain.
+</footer>
+<script>
+function analyser(){
+let a=document.getElementById("equipe1").value;
+let b=document.getElementById("equipe2").value;
+if(!a || !b){
+document.getElementById("resultat").innerText="Entre les deux noms des équipes.";
+return;
+}
+document.getElementById("resultat").innerText=
+"Match sélectionné : "+a+" contre "+b+
+". Les statistiques réelles seront ajoutées dans une prochaine version.";
+}
+</script>
+</body>
+</html>
+
